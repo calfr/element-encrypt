@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="../js/element-encrypt.js"></script>
+</head>
+<body>
+<h1>Some content on this page has been encrypted.</h1>
+<b>Please input a password to decrypt the encrypted content.</b>
+<br>
+<pre id="test1" data-elementencrypt-password="test">
+    <p>Well done, but there's another one to go through!</p>
+    <p id="test2" data-elementencrypt-password="secondtest">That's all, folks!</p>
+</pre>
+<p id="test3" data-elementencrypt-password="thirdtest">Multiple at the same level are functional too!</p>
+</body>
+</html>

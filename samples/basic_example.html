@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Basic Example
+  </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js">
+  </script>
+  <script src="../js/element-encrypt.js">
+  </script>
+ </head>
+ <body>
+  <h1>
+   Some content on this page has been encrypted.
+  </h1>
+  <b>
+   Please input a password to decrypt the encrypted content.
+  </b>
+  <br/>
+  <form data-decryption-form-for="test1" onsubmit="return submitDecryptionForm(event)">
+   <input name="decryptionPassword" type="password"/>
+   <button type="submit">
+    Decrypt
+   </button>
+  </form>
+  <br/>
+  <pre data-enc-data="aNgp/4IDhzs6eVUyRrxjNDqkSJFle/PYpJvij9nsumfIFwo6EkVN7qyVn0U6o+IL6SY48mXzq9JAJlQc+UPOrDI8o8rCHoc6P6TbVUZ+UJvL2JOAiCPLqfZS2z6+9WSdyXsS6wHPnTdoUYsip6Aurvgd4C3oTMyLGzGyEfMjbEhCGUYNz7PQbfm/NVN0inEx8vMickiNesauAzYDOsd1bUXklR5IB7RdTSKBzfFPr3WtZIEOjVRSN4FrnQjIdNEtjs69UY6fsQVkaltewCP2VY8SOKhMqDOn2EcuXfyuBN9UKr4rZGHae6Jtedz/VyB+Tfb4BxKthFWW2dBnsD8ybQ/Wo7WSN755UwXwGzU0oGpAHcFwX1JpUEBxgEt1y12Sg8XtDMUkZdkHBu5bbUBoZhmZiYm6I5SBOr0aAw2Ht0lYfOEwVASYSuU2Xm3w6ZEeQ0l6UW2wew0wQVgNDnA/Zd5NS0VZaCmLvXyGDkHk13jGAsis7qSerCvqzCe8tq0FYvvjm4YPRJEW8U7MSzebDRo1d/KlZclMIK4V8Jz1n21RVLXhyRfypOZfH6ucuwCoVLUzGA+ocPkIfqRx2vamCV8uFGpIqXhU6PcqQc1WABZPfcb+ukYPvkJ55TqN2H0+Hwiq9WEDpaaXi8Mn96fcb2OuFx9NrZ/DrHxLOJp9yDF3oABC0dYQrstiRp6gijrlm5Juc1dABQCK3kP0X3Gu23fsjGjuul4sh4K+vhS5ko4=" data-iv="PChXGnkFdutOgmN4F3kUvQ==" data-salt="rhv5p2sACq5NOXWjPb0XKg==" id="test1"></pre>
+  <form data-decryption-form-for="test3" onsubmit="return submitDecryptionForm(event)">
+   <input name="decryptionPassword" type="password"/>
+   <button type="submit">
+    Decrypt
+   </button>
+  </form>
+  <br/>
+  <pre data-enc-data="T1XLs071RmCkSdbNv912zYQChSJZwYiZO0cFKd9bUDMDtM83eGoJSDonWQM9BnLX+xZSZxmZYKSUtN26tXmZ7o8SX1BIiXLRfwSzh2PnQiB+HlqIbbYB8rlKhueILfZC76yIJ6Ij6HIqbIT1WnQOQg==" data-iv="Zw58ygqUYG0mqZ2Hdtq+wg==" data-salt="DqAOK6Cwknu5AZUNNO2OaQ==" id="test3"></pre>
+ </body>
+</html>
