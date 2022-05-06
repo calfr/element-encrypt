@@ -38,9 +38,8 @@ def process_file(file, template=importlib.resources.read_text('elementencrypt','
 
     stack = stack_build(soup,[])
     for result in stack:
-        if result.children != None:
-            encrypted_content = encrypt_html(result.prettify(),result['data-elementencrypt-password'])
-            result.replace_with(BeautifulSoup(populate_template(template,encrypted_content,{"%%ELEMENT_ID%%":result["id"] or secrets.token_hex(12)}),'html.parser'))
-        else:
-            del result["data-elementencrypt-password"]
+        password = result['data-elementencrypt-password']
+        del result['data-elementencrypt-password']
+        encrypted_content = encrypt_html(result.prettify(),password)
+        result.replace_with(BeautifulSoup(populate_template(template,encrypted_content,{"%%ELEMENT_ID%%":result.get("id",None) or secrets.token_hex(12)}),'html.parser'))
     return soup.prettify()
